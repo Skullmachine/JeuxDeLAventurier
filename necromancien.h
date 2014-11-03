@@ -1,10 +1,11 @@
 #ifndef NECROMANCIEN_H
 #define NECROMANCIEN_H
 
-#include "magie.h"
+#include "aventurier.h"
 #include "arme.h"
 
-class Necromancien: public Magie
+namespace Magie {
+class Necromancien: public Aventurier
 {
 public:
     Necromancien();
@@ -19,12 +20,22 @@ public:
     void setResistancePhysique(int RP);
     int getResistancePhysique();
 
-private:
-    //Arme m_arme;
-   unsigned int m_vitesse;
-   unsigned int m_resistanceMagie;
-   unsigned int m_resistancePhysique;
+    void choixArme();
 
+    void spec();
+
+private:
+    Arme m_arme;
+    unsigned int m_vitesse;
+    unsigned int m_resistanceMagie;
+    unsigned int m_resistancePhysique;
+    unsigned int intelligence;
+
+    std::string arme1;
+    std::string arme2;
+    std::string armeChoisie;
 };
+}
+
 
 #endif // NECROMANCIEN_H

@@ -1,15 +1,17 @@
 #ifndef CHANTEURDESORT_H
 #define CHANTEURDESORT_H
 
-#include "magie.h"
+#include "aventurier.h"
 #include "arme.h"
 
-class ChanteurDeSort: public Magie
+namespace Magie {
+class ChanteurDeSort: public Aventurier
 {
 public:
     ChanteurDeSort();
     ~ChanteurDeSort();
 
+    //**1**
     void setVitesse(int vitesse);
     int getVitesse();
 
@@ -24,15 +26,18 @@ public:
     void spec();
 
 private:
-     Arme m_arme;
+    Arme m_arme;
     unsigned int m_vitesse;
     unsigned int m_resistanceMagie;
     unsigned int m_resistancePhysique;
+    unsigned int intelligence;
 
     std::string arme1;
     std::string arme2;
     std::string armeChoisie;
 
 };
+}
+
 
 #endif // CHANTEURDESORT_H

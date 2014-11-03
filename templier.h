@@ -1,15 +1,15 @@
 #ifndef TEMPLIER_H
 #define TEMPLIER_H
 
-#include "physique.h"
+#include "aventurier.h"
 #include "arme.h"
 
-class Templier: public Physique, public Arme
+namespace Physique {
+class Templier: public Aventurier
 {
 public:
     Templier();
     ~Templier();
-
     void setVitesse(int vitesse);
     int getVitesse();
 
@@ -19,13 +19,23 @@ public:
     void setResistancePhysique(int RP);
     int getResistancePhysique();
 
+    void choixArme();
+
+    void spec();
 
 private:
     Arme m_arme;
-   unsigned int m_vitesse;
-   unsigned int m_resistanceMagie;
-   unsigned int m_resistancePhysique;
+    unsigned int m_vitesse;
+    unsigned int m_resistanceMagie;
+    unsigned int m_resistancePhysique;
+    unsigned int force;
+
+    std::string arme1;
+    std::string arme2;
+    std::string armeChoisie;
 
 };
+}
+
 
 #endif // TEMPLIER_H

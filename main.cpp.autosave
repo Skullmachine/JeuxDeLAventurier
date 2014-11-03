@@ -7,9 +7,13 @@
 
 int main(int argc, char *argv[])
 {
-
+    
+    std::cout<<"Choix Presentation :"<<std::endl;
+    std::cout<<"*******************************"<<std::endl;
+    std::cout<<"* 1.Specification personnages *"<<std::endl;
+    std::cout<<"* 2.Comparaison personnages   *"<<std::endl;
+    
     Magie::ChanteurDeSort chanteur;
-
     chanteur.spec();
 
     Physique::Archers archer;

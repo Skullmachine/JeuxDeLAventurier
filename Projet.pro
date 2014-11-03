@@ -17,20 +17,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     aventurier.cpp \
-    magie.cpp \
     necromancien.cpp \
     chanteurdesort.cpp \
-    physique.cpp \
     templier.cpp \
     archers.cpp \
     arme.cpp
 
 HEADERS += \
     aventurier.h \
-    magie.h \
     necromancien.h \
     chanteurdesort.h \
-    physique.h \
     templier.h \
     archers.h \
     arme.h

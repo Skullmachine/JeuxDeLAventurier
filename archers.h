@@ -1,10 +1,11 @@
 #ifndef ARCHERS_H
 #define ARCHERS_H
 
-#include "physique.h"
+#include "aventurier.h"
 #include "arme.h"
 
-class Archers: public Physique
+namespace Physique {
+class Archers: public Aventurier
 {
 public:
     Archers();
@@ -19,12 +20,23 @@ public:
     void setResistancePhysique(int RP);
     int getResistancePhysique();
 
+    void choixArme();
+
+    void spec();
+
 private:
     Arme m_arme;
-   unsigned int m_vitesse;
-   unsigned int m_resistanceMagie;
-   unsigned int m_resistancePhysique;
+    unsigned int m_vitesse;
+    unsigned int m_resistanceMagie;
+    unsigned int m_resistancePhysique;
+    unsigned int force;
+
+    std::string arme1;
+    std::string arme2;
+    std::string armeChoisie;
 
 };
+}
+
 
 #endif // ARCHERS_H
