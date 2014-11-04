@@ -4,7 +4,8 @@
 #include "aventurier.h"
 #include "arme.h"
 
-namespace Magie {
+namespace Magie
+{
 class Necromancien: public Aventurier
 {
 public:
@@ -22,7 +23,8 @@ public:
 
     void choixArme();
 
-    void spec();
+    void spec(std::ostream &flux);
+    void choixPrenom();
 
 private:
     Arme m_arme;
@@ -35,7 +37,7 @@ private:
     std::string arme2;
     std::string armeChoisie;
 };
-}
+};
 
 
 #endif // NECROMANCIEN_H

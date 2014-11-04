@@ -13,6 +13,7 @@ Physique::Archers::Archers()
     this->setPrenom("Prenom");
     this->setPV(50);
 
+    choixPrenom();
     choixArme();
 }
 Physique::Archers::~Archers()
@@ -53,7 +54,7 @@ int Physique::Archers::getResistancePhysique()
 void Physique::Archers::choixArme()
 {
     int choix=0;
-    std::cout<<"ARCHERS"<<std::endl;
+
     std::cout<< "Choix de l'arme : "<<std::endl<<"1."<<this->arme1<<std::endl<<"2."<<this->arme2<<std::endl;
     std::cout<<"choix: ";
     std::cin>>choix;
@@ -74,20 +75,35 @@ void Physique::Archers::choixArme()
     std::cout<<std::endl<<std::endl;
 }
 
-void Physique::Archers::spec()
+void Physique::Archers::spec(std::ostream &flux)
 {
-    std::cout<<"***************************************************************"<<std::endl;
-    std::cout<< "specification de l'archer :"<<std::endl;
-    std::cout<<"prenom : "<<this->getPrenom()<<std::endl;
-    std::cout<<"EXP : "<<this->getExperience()<<std::endl;
-    std::cout<<"PV : "<<this->getPV()<<std::endl;
-    std::cout<<"Niveau : "<<this->getNiveau()<<std::endl;
-    std::cout<<"Point de force : "<<this->force<<std::endl;
+    flux<<"***************************************************************"<<std::endl;
+    flux<< "specification de l'archer :"<<std::endl;
+    flux<<"prenom : "<<this->getPrenom()<<std::endl;
+    flux<<"EXP : "<<this->getExperience()<<std::endl;
+    flux<<"PV : "<<this->getPV()<<std::endl;
+    flux<<"Niveau : "<<this->getNiveau()<<std::endl;
+    flux<<"Point de force : "<<this->force<<std::endl;
+    flux<<"Vitesse : "<<this->m_vitesse<<std::endl;
+    flux<<"Resistance Magie : "<<this->m_resistanceMagie<<std::endl;
+    flux<<"Resistance Physique : "<<this->m_resistancePhysique<<std::endl;
+    flux<<std::endl;
+    flux<<"ARME : "<<this->armeChoisie<<std::endl;
+    flux<<"Degats : "<<this->m_arme.getdegats()<<std::endl;
+    flux<<"Niveau arme : "<<this->m_arme.getNiveau()<<std::endl;
+    flux<<"***************************************************************"<<std::endl;
+    flux<<std::endl<<std::endl;
+}
+
+void Physique::Archers::choixPrenom()
+{
+    std::string prenom;
+
+    std::cout<<"ARCHERS"<<std::endl;
+    std::cout<<"Choix d'un prenom : ";
+    std::cin>>prenom;
+
+    this->setPrenom(prenom);
     std::cout<<std::endl;
-    std::cout<<"Arme : "<<this->armeChoisie<<std::endl;
-    std::cout<<"Vitesse : "<<this->m_vitesse<<std::endl;
-    std::cout<<"Resistance Magie : "<<this->m_resistanceMagie<<std::endl;
-    std::cout<<"Resistance Physique : "<<this->m_resistancePhysique<<std::endl;
-    std::cout<<"***************************************************************"<<std::endl;
-     std::cout<<std::endl<<std::endl;
+
 }

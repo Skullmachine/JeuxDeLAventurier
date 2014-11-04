@@ -13,6 +13,7 @@ Physique::Templier::Templier()
     this->setPrenom("Prenom");
     this->setPV(50);
 
+    choixPrenom();
     choixArme();
 }
 
@@ -75,22 +76,35 @@ void Physique::Templier::choixArme()
     std::cout<<std::endl<<std::endl;
 }
 
-void Physique::Templier::spec()
+void Physique::Templier::spec(std::ostream &flux)
 {
-    std::cout<<"***************************************************************"<<std::endl;
-    std::cout<< "specification du chanteur de sort :"<<std::endl;
-    std::cout<<"prenom : "<<this->getPrenom()<<std::endl;
-    std::cout<<"EXP : "<<this->getExperience()<<std::endl;
-    std::cout<<"PV : "<<this->getPV()<<std::endl;
-    std::cout<<"Niveau : "<<this->getNiveau()<<std::endl;
-    std::cout<<"Point de force : "<<this->force<<std::endl;
-    std::cout<<std::endl;
-    std::cout<<"Arme : "<<this->armeChoisie<<std::endl;
-    std::cout<<"Vitesse : "<<this->m_vitesse<<std::endl;
-    std::cout<<"Resistance Magie : "<<this->m_resistanceMagie<<std::endl;
-    std::cout<<"Resistance Physique : "<<this->m_resistancePhysique<<std::endl;
-
-    std::cout<<"***************************************************************"<<std::endl;
-    std::cout<<std::endl<<std::endl;
+    flux<<"***************************************************************"<<std::endl;
+    flux<< "specification du chanteur de sort :"<<std::endl;
+    flux<<"prenom : "<<this->getPrenom()<<std::endl;
+    flux<<"EXP : "<<this->getExperience()<<std::endl;
+    flux<<"PV : "<<this->getPV()<<std::endl;
+    flux<<"Niveau : "<<this->getNiveau()<<std::endl;
+    flux<<"Point de force : "<<this->force<<std::endl;
+    flux<<"Vitesse : "<<this->m_vitesse<<std::endl;
+    flux<<"Resistance Magie : "<<this->m_resistanceMagie<<std::endl;
+    flux<<"Resistance Physique : "<<this->m_resistancePhysique<<std::endl;
+    flux<<std::endl;
+    flux<<"ARME : "<<this->armeChoisie<<std::endl;
+    flux<<"Degats : "<<this->m_arme.getdegats()<<std::endl;
+    flux<<"Niveau arme : "<<this->m_arme.getNiveau()<<std::endl;
+    flux<<"***************************************************************"<<std::endl;
+    flux<<std::endl<<std::endl;
 }
 
+void Physique::Templier::choixPrenom()
+{
+    std::string prenom;
+
+    std::cout<<"TEMPLIER"<<std::endl;
+    std::cout<<"Choix d'un prenom : ";
+    std::cin>>prenom;
+
+    this->setPrenom(prenom);
+    std::cout<<std::endl;
+
+}

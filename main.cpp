@@ -1,25 +1,47 @@
 #include <iostream>
-#include "chanteurdesort.h"
-#include "archers.h"
-#include "necromancien.h"
-#include "templier.h"
+
+#include "operateurs.h"
 
 
-int main(int argc, char *argv[])
+int main()
 {
+    int sortir = 1;
 
-    Magie::ChanteurDeSort chanteur;
+    do
+    {
+        std::cout<<"Choix Présentation :"<<std::endl;
+        std::cout<<"*******************************"<<std::endl;
+        std::cout<<"*                             *"<<std::endl;
+        std::cout<<"* 1.Specifications personnages *"<<std::endl;
+        std::cout<<"* 2.Sortie                    *"<<std::endl;
+        std::cout<<"*                             *"<<std::endl;
+        std::cout<<"*******************************"<<std::endl;
 
-    chanteur.spec();
+        int choix =0;
+        std::cin>>choix;
 
-    Physique::Archers archer;
-    archer.spec();
+        if (choix==1)
+        {
+            Magie::ChanteurDeSort chanteur;
+           std::cout<<chanteur;
 
-    Magie::Necromancien necro;
-    necro.spec();
+            Physique::Archers archer;
+            std::cout<<archer;
 
-    Physique::Templier temp;
-    temp.spec();
+            Magie::Necromancien necro;
+            std::cout<<necro;
+
+            Physique::Templier temp;
+            std::cout<<temp;
+        }
+
+        else
+            sortir=0;
+    }while(sortir);
+
+
+
+
 
 
     return 0;

@@ -12,7 +12,7 @@ public:
     void setArme(std::string nomArme);
     int getdegats();
 
-
+    int getNiveau();
 
 
 private:

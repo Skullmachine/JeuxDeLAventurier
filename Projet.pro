@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     chanteurdesort.cpp \
     templier.cpp \
     archers.cpp \
-    arme.cpp
+    arme.cpp \
+    operateurs.cpp
 
 HEADERS += \
     aventurier.h \
@@ -29,4 +30,5 @@ HEADERS += \
     chanteurdesort.h \
     templier.h \
     archers.h \
-    arme.h
+    arme.h \
+    operateurs.h

@@ -21,7 +21,8 @@ public:
 
     void choixArme();
 
-    void spec();
+    void spec(std::ostream &flux);
+    void choixPrenom();
 
 private:
     Arme m_arme;
@@ -35,7 +36,7 @@ private:
     std::string armeChoisie;
 
 };
-}
+};
 
 
 #endif // TEMPLIER_H

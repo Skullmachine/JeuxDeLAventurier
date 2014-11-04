@@ -22,6 +22,7 @@ public:
     void setNiveau(int niveau);
     int getNiveau();
 
+
 private:
     std::string prenom;
     unsigned int experience;

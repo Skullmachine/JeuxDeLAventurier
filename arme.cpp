@@ -75,5 +75,8 @@ int Arme::getdegats()
     return this->Degats;
 }
 
-
+int Arme::getNiveau()
+{
+    return this->niveau;
+}
 
