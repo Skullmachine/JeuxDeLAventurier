@@ -4,8 +4,8 @@
 #include "aventurier.h"
 #include "arme.h"
 
-namespace Physique {
-class Archers: public Aventurier
+namespace Physique { // on ajoute une classe dans le namespace Physique
+class Archers: public Aventurier //l'Archers hérite de la classe Aventurier
 {
 public:
     Archers();
@@ -24,7 +24,9 @@ public:
 
     void spec(std::ostream &flux);
 
-    virtual void choixPrenom();
+    virtual void choixPrenom(); //methode virtuelle
+
+    int getDegats();
 
 
 private:

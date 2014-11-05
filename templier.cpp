@@ -108,3 +108,8 @@ void Physique::Templier::choixPrenom()
     std::cout<<std::endl;
 
 }
+
+int Physique::Templier::getDegats()
+{
+    return this->m_arme.getdegats();
+}

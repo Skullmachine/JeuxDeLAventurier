@@ -107,3 +107,8 @@ void Magie::ChanteurDeSort::choixPrenom()
     std::cout<<std::endl;
 
 }
+
+int Magie::ChanteurDeSort::getDegats()
+{
+    return this->m_arme.getdegats();
+}

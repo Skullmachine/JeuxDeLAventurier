@@ -107,3 +107,8 @@ void Physique::Archers::choixPrenom()
     std::cout<<std::endl;
 
 }
+
+int Physique::Archers::getDegats()
+{
+    return this->m_arme.getdegats();
+}

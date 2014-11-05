@@ -24,6 +24,8 @@ public:
     void spec(std::ostream &flux);
     virtual void choixPrenom();
 
+    int getDegats();
+
 private:
     Arme m_arme;
     unsigned int m_vitesse;

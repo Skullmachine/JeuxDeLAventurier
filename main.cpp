@@ -2,6 +2,16 @@
 
 #include "operateurs.h"
 
+// on recupere deux types differents de classe (dans notre cas) et on soustrait
+// les PV d'un perso avec les points de degats d'un deuxieme
+template<typename Type1, typename Type2> void Attaquer(Type1 &attaquant, Type2 &attaque)
+{ // l'attaquant attaque l'attaqué
+    int tmp = attaque.getPV() - attaquant.getDegats();
+    attaque.setPV(tmp);
+}
+
+
+
 
 int main()
 {
@@ -22,15 +32,23 @@ int main()
 
         if (choix==1)
         {
+            // on cree un objet chanteur de sort
             Magie::ChanteurDeSort chanteur;
            std::cout<<chanteur;
 
+           // ... un archer
             Physique::Archers archer;
             std::cout<<archer;
 
+            std::cout<< "le chanteur attaque l'archer"<<std::endl;
+            Attaquer(chanteur, archer);
+            std::cout<<"PV archer: "<<archer.getPV()<<std::endl<< std::endl;// on affiche les nouveau PV
+
+            // on cree un necro
             Magie::Necromancien necro;
             std::cout<<necro;
 
+            // ... un templier
             Physique::Templier temp;
             std::cout<<temp;
         }

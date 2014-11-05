@@ -108,3 +108,8 @@ void Magie::Necromancien::choixPrenom()
     std::cout<<std::endl;
 
 }
+
+int Magie::Necromancien::getDegats()
+{
+    return this->m_arme.getdegats();
+}
