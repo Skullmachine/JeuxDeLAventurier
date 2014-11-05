@@ -22,7 +22,7 @@ public:
     void choixArme();
 
     void spec(std::ostream &flux);
-    void choixPrenom();
+    virtual void choixPrenom();
 
 private:
     Arme m_arme;

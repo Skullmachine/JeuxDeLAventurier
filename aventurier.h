@@ -22,6 +22,7 @@ public:
     void setNiveau(int niveau);
     int getNiveau();
 
+    virtual void choixPrenom() =0; //virtuelle pure
 
 private:
     std::string prenom;

@@ -24,7 +24,7 @@ public:
 
     void spec(std::ostream &flux);
 
-    void choixPrenom();
+    virtual void choixPrenom();
 
 
 private:

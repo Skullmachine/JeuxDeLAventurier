@@ -1,17 +1,16 @@
-#ifndef CHANTEURDESORT_H
-#define CHANTEURDESORT_H
+#ifndef ARCHERS_H
+#define ARCHERS_H
 
 #include "aventurier.h"
 #include "arme.h"
 
-namespace Magie {
-class ChanteurDeSort: public Aventurier
+namespace Physique { // on ajoute une classe dans le namespace Physique
+class Archers: public Aventurier //l'Archers hérite de la classe Aventurier
 {
 public:
-    ChanteurDeSort();
-    ~ChanteurDeSort();
+    Archers();
+    ~Archers();
 
-    //**1**
     void setVitesse(int vitesse);
     int getVitesse();
 
@@ -24,14 +23,16 @@ public:
     void choixArme();
 
     void spec(std::ostream &flux);
-    virtual void choixPrenom();
+
+    virtual void choixPrenom(); //methode virtuelle
+
 
 private:
     Arme m_arme;
     unsigned int m_vitesse;
     unsigned int m_resistanceMagie;
     unsigned int m_resistancePhysique;
-    unsigned int intelligence;
+    unsigned int force;
 
     std::string arme1;
     std::string arme2;
@@ -41,4 +42,4 @@ private:
 };
 
 
-#endif // CHANTEURDESORT_H
+#endif // ARCHERS_H

@@ -10,12 +10,12 @@ int main()
     do
     {
         std::cout<<"Choix Présentation :"<<std::endl;
-        std::cout<<"*******************************"<<std::endl;
-        std::cout<<"*                             *"<<std::endl;
+        std::cout<<"********************************"<<std::endl;
+        std::cout<<"*                              *"<<std::endl;
         std::cout<<"* 1.Specifications personnages *"<<std::endl;
-        std::cout<<"* 2.Sortie                    *"<<std::endl;
-        std::cout<<"*                             *"<<std::endl;
-        std::cout<<"*******************************"<<std::endl;
+        std::cout<<"* 2.Sortie                     *"<<std::endl;
+        std::cout<<"*                              *"<<std::endl;
+        std::cout<<"********************************"<<std::endl;
 
         int choix =0;
         std::cin>>choix;
