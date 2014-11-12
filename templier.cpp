@@ -84,11 +84,12 @@ void Physique::Templier::spec(std::ostream &flux)
     flux<<"EXP : "<<this->getExperience()<<std::endl;
     flux<<"PV : "<<this->getPV()<<std::endl;
     flux<<"Niveau : "<<this->getNiveau()<<std::endl;
+    flux<<"----------------"<<std::endl;
     flux<<"Point de force : "<<this->force<<std::endl;
     flux<<"Vitesse : "<<this->m_vitesse<<std::endl;
     flux<<"Resistance Magie : "<<this->m_resistanceMagie<<std::endl;
     flux<<"Resistance Physique : "<<this->m_resistancePhysique<<std::endl;
-    flux<<std::endl;
+    flux<<"----------------"<<std::endl;
     flux<<"ARME : "<<this->armeChoisie<<std::endl;
     flux<<"Degats : "<<this->m_arme.getdegats()<<std::endl;
     flux<<"Niveau arme : "<<this->m_arme.getNiveau()<<std::endl;
